@@ -18,6 +18,13 @@ deps:
 	# Download Helm
 	@curl -L https://get.helm.sh/helm-v3.8.2-darwin-amd64.tar.gz -o tmp/helm_installer.gz
 	@tar -zxvf tmp/helm_installer.gz -C tmp/ && mv tmp/darwin-amd64/helm /usr/local/bin/helm
+	# Download kubectx &kubens
+	# mac-command: brew install kubectx
+	@sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
+	@sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
+	@sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
+	# Install kubetail
+	@brew tap johanhaleby/kubetail && brew install kubetail
 
 .PHONY: install
 install:
@@ -29,3 +36,12 @@ clean:
 	@rm tmp/minikube_installer
 	@rm tmp/helm_installer.gz
 	@rm -r tmp/darwin-amd64
+
+beep:
+	# Download kubectx &kubens
+	sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
+	sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
+	sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
+
+hey:
+	brew tap johanhaleby/kubetail && brew install kubetail
