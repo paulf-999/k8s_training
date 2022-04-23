@@ -1,0 +1,6 @@
+{
+    "Parameters" : {
+        "KubeCtlInstallerPath" : "https://dl.k8s.io/release/v1.23.0/bin/darwin/amd64/kubectl",
+        "MinikubeInstallerPath" : "https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64"
+    }
+}
