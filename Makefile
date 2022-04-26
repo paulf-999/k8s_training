@@ -36,12 +36,3 @@ clean:
 	@rm tmp/minikube_installer
 	@rm tmp/helm_installer.gz
 	@rm -r tmp/darwin-amd64
-
-beep:
-	# Download kubectx &kubens
-	sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
-	sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
-	sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
-
-hey:
-	brew tap johanhaleby/kubetail && brew install kubetail
